@@ -56,16 +56,10 @@ def solve():
     with sample_audio as source:
         audio = r.record(source)
     key = r.recognize_google(audio)
-    print(f'Captcha Passphrase - {key}')
     driver.find_element_by_id("audio-response").send_keys(key.lower())
     driver.find_element_by_id("audio-response").send_keys(Keys.ENTER)
-    print(f'Captcha Solved')
-    end = time.time()
-    taken = end - start
-    print(f'Time Taken - {taken}')
     os.system('del /f sample.mp3')
     os.system('del /f sample.wav')
     return True
   except:
-    print('NO CAPTCHA DETECTED')
     return False

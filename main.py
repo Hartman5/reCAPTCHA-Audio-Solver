@@ -1,3 +1,11 @@
+import os
+import re
+import pydub
+import urllib
+import selenium
+import speech_recognition as sr
+
+from selenium.webdriver.common.keys import Keys
 #No driver config added so you can configure to your liking works with selenium, seleniun-wire, undetected_chromedriver, thats all thats tested.
 #Optimize this to however but only call function solve() when the captcha is present
 def solve():

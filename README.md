@@ -7,7 +7,7 @@ When a captcha comes up on the page you are trying to automate call the solve fu
 # Examples
 ```python
 #put this where a captcha is in your code. (Ex. After filling out signup form)
-response = solve()
+response = solve(driver=driver)
 if response == True:
   print('Captcha Solved')
 elif response == False:
